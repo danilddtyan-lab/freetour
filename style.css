@@ -86,7 +86,7 @@ body {
 
 /* Карточка товара */
 .item {
-    background: #243126;
+    background: rgba(255, 255, 255, 0.2); /* белый с прозрачностью 0.2 */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
