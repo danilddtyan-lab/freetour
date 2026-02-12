@@ -8,7 +8,7 @@ body {
     font-family: Arial, sans-serif;
     background:
         linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-        url("MPSavard_SRMR2024_RH-31_COVER.jpg");
+        url("2023-Silk-Road-Mountain-Race-Josh-Ibbett_1.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -37,7 +37,7 @@ body {
 /* Большой логотип */
 .logo-big {
     width: 80px;   /* можно увеличить или уменьшить */
-    height: 40px;
+    height: 55px;
     object-fit: cover;
     border-radius: 0px; /* мягкие углы логотипа */
 }
