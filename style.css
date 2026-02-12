@@ -14,19 +14,10 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
-    color: #fff; 
+    color: #fff; /* весь текст белый */
 }
 
-
-.header-boxed {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    gap: 20px;
-    color: #fff;
-}
- 
-
+/* Header */
 .header-boxed {
     display: flex;
     align-items: center;
@@ -35,20 +26,22 @@ body {
     max-width: 100%;
 }
 
-.logo-container
-    flex: 0 0 auto; 
-    background: rgba(0,0,0,0);
+/* Логотип в закруглённом прямоугольнике */
+.logo-container {
+    flex: 0 0 auto; /* не растягивается */
+    background: rgba(255,255,255,0.2);
     border-radius: 15px;
     padding: 10px 15px;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
 }
 
+/* Логотип */
 .logo-big {
-    width: 130px; /* фиксированная ширина */
-    height: auto; /* высота автоматически сохраняет пропорции */
-    object-fit: contain; /* не обрезает и сохраняет пропорции */
+    width: 130px;   /* фиксированная ширина */
+    height: auto;   /* сохраняет пропорции */
+    object-fit: contain;
 }
 
 /* Текст рядом с логотипом */
@@ -67,8 +60,9 @@ body {
     font-size: 16px;
 }
 
+/* Контейнер сайта */
 .container {
-    max-width: 1200px; /* увеличиваем для 4 товаров */
+    max-width: 1200px; /* достаточно для 4 товаров */
     margin: 0 auto;
     padding: 20px;
 }
@@ -80,22 +74,22 @@ body {
     gap: 20px;
 }
 
-/* под разные экраны 4 на пк и 1 на телефоне  */
+/* Адаптивность */
 @media (max-width: 1200px) {
     .catalog {
-        grid-template-columns: repeat(3, 1fr); /* 3 товара */
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (max-width: 900px) {
     .catalog {
-        grid-template-columns: repeat(2, 1fr); /* 2 товара */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 600px) {
     .catalog {
-        grid-template-columns: 1fr; /* 1 товар на телефонах */
+        grid-template-columns: 1fr;
     }
 }
 
@@ -108,7 +102,7 @@ body {
     color: #fff;
     
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 .item img {
@@ -119,9 +113,9 @@ body {
 
 .item-content {
     padding: 15px;
-    flex: 1;                  
+    flex: 1; /* растягивается по высоте */
     display: flex;
-    flex-direction: column;   /* чтобы кнопка была внизу */
+    flex-direction: column; /* кнопка внизу */
 }
 
 .item-title {
@@ -145,17 +139,22 @@ body {
     text-decoration: none;
     border-radius: 5px;
     transition: 0.3s;
-    margin-top: auto; /* кнопку вниз при любом опсании*/
+    margin-top: auto; /* кнопка прижимается к низу */
 }
 
 .item-button:hover {
     background: #e0a96d;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
     font-size: 14px;
     color: #fff;
 }
+
+
+
+
 
