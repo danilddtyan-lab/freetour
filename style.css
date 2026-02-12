@@ -17,7 +17,7 @@ body {
     color: #fff; /* весь текст белый */
 }
 
-/* header */
+/* Сам header */
 .header-boxed {
     display: flex;
     align-items: center;
@@ -26,17 +26,17 @@ body {
     color: #fff;
 }
 
-/* Контейнер логотипа с закруглённым прямоугольником 
+/* Контейнер лого с закр краями 
 .logo-container {
     background: rgba(255, 255, 255, 0.2); 
     border-radius: 15px;
     padding: 10px 15px; 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; ОТКЛЮЧЕНО
 }
- */
-/* Большой логотип */
+ 
+/* Большое лого */
 .logo-big {
     width: 130px;   
     height: 70px;
@@ -44,11 +44,11 @@ body {
     border-radius: 0px;
 }
 
-/* Текст рядом с логотипом */
+/* Текст рядом с лого */
 .header-text h1,
 .header-text p {
     margin: 0;
-    color: #fff; /* текст шапки белый */
+    color: #fff;
 }
 
 .header-text h1 {
@@ -72,12 +72,16 @@ body {
     gap: 20px;
 }
 
+/* Карточка товара */
 .item {
     background: #2f4f4f;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    color: #fff; 
+    color: #fff;
+    
+    display: flex;
+    flex-direction: column; 
 }
 
 .item img {
@@ -88,18 +92,21 @@ body {
 
 .item-content {
     padding: 15px;
+    flex: 1;                  /* растяyenm плашку по высоте */
+    display: flex;
+    flex-direction: column;   
 }
 
 .item-title {
     font-size: 18px;
     margin-bottom: 10px;
-    color: #fff; 
+    color: #fff;
 }
 
 .item-price {
     font-weight: bold;
     margin-bottom: 10px;
-    color: #fff; /* цена белая */
+    color: #fff;
 }
 
 .item-button {
@@ -107,10 +114,11 @@ body {
     text-align: center;
     padding: 10px;
     background: #FF5F1F;
-    color: #fff; /* текст кнопки белый */
+    color: #fff;
     text-decoration: none;
     border-radius: 5px;
     transition: 0.3s;
+    margin-top: auto; /* чтоб кнопка всегда снизу была*/
 }
 
 .item-button:hover {
@@ -121,6 +129,5 @@ footer {
     text-align: center;
     padding: 20px;
     font-size: 14px;
-    color: #fff; 
+    color: #fff;
 }
-
