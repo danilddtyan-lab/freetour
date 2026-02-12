@@ -16,36 +16,28 @@ body {
     min-height: 100vh;
     color: #333;
 }
-
 header {
-    background: transparent;
-    color: #fff;
-    padding: 20px 0; /* только сверху и снизу */
-}
-
-.header-inner {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 15px;
-    max-width: 900px;
-    margin: 0 auto; /* центр лого */
-    position: relative;
+    padding: 20px 0;
+    color: #fff;
+    /* НЕ задаём background — фон будет просвечивать с body */
 }
 
-.logo {
+header .logo {
     width: 60px;
     height: 60px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #fff; 
-    position: absolute;
-    left: 0;   /* прямо к левому краю */
-    top: 50%;
-    transform: translateY(-50%);
+    
+    margin-right: 15px;
 }
 
-.header-text {
-    margin-left: 75px; /* отступ, чтобы текст не налезал на логотип */
+.header-inner {
+    max-width: 900px;
+    margin: 0 auto; /* текст центрируется */
+    flex: 1;
 }
 
 .header-text h1 {
@@ -57,6 +49,7 @@ header {
     margin: 5px 0 0 0;
     font-size: 14px;
 }
+
 
 
 
