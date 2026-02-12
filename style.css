@@ -8,7 +8,7 @@ body {
     font-family: Arial, sans-serif;
     background:
         linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-        url("SRMR-3.jpg");
+        url("MPSavard_SRMR2024_RH-31_COVER.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -17,7 +17,7 @@ body {
     color: #333;
 }
 
-/* УБИРАЕМ ЧЕРНЫЙ ФОН */
+
 header {
     background: transparent;  /* было #000 */
     color: #fff;
