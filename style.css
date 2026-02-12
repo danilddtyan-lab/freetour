@@ -15,39 +15,42 @@ body {
     background-attachment: fixed;
     min-height: 100vh;
     color: #333;
-}
-header {
-    position: relative;
+/* Сам header */
+.header-boxed {
     display: flex;
     align-items: center;
-    padding: 20px 0;
+    padding: 20px;
+    gap: 20px;
     color: #fff;
-    /* НЕ задаём background — фон будет просвечивать с body */
 }
 
-header .logo {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+/* Контейнер логотипа с закруглённым прямоугольником */
+.logo-container {
+    background: rgba(255, 255, 255, 0.2); /* слегка прозрачный прямоугольник */
+    border-radius: 15px;
+    padding: 10px 15px; /* внутренние отступы вокруг логотипа */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+/* Большой логотип */
+.logo-big {
+    width: 100px;   /* можно увеличить или уменьшить */
+    height: 100px;
     object-fit: cover;
-    
-    margin-right: 15px;
+    border-radius: 10px; /* мягкие углы логотипа */
 }
 
-.header-inner {
-    max-width: 900px;
-    margin: 0 auto; /* текст центрируется */
-    flex: 1;
-}
-
+/* Текст рядом с логотипом */
 .header-text h1 {
     margin: 0;
-    font-size: 26px;
+    font-size: 28px;
 }
 
 .header-text p {
     margin: 5px 0 0 0;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 
