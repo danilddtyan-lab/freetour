@@ -26,7 +26,7 @@ body {
 
 /* Контейнер логотипа с закруглённым прямоугольником */
 .logo-container {
-    background: rgba(255, 255, 255, 0.2); /* слегка прозрачный прямоугольник */
+    backgroun d: rgba(255, 255, 255, 0.2); /* слегка прозрачный прямоугольник */
     border-radius: 15px;
     padding: 10px 15px; /* внутренние отступы вокруг логотипа */
     display: flex;
@@ -36,8 +36,8 @@ body {
  
 /* Большой логотип */
 .logo-big {
-    width: 20px;   /* можно увеличить или уменьшить */
-    height: 20px;
+    width: 40px;   /* можно увеличить или уменьшить */
+    height: 40px;
     object-fit: cover;
     border-radius: 0px; /* мягкие углы логотипа */
 }
@@ -45,7 +45,7 @@ body {
 /* Текст рядом с логотипом */
 .header-text h1 {
     margin: 0;
-    font-size: 28px;
+    font-size: 32px;
 }
 
 .header-text p {
