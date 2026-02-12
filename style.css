@@ -36,7 +36,7 @@ body {
  
 /* Большой логотип */
 .logo-big {
-    width: 40px;   /* можно увеличить или уменьшить */
+    width: 80px;   /* можно увеличить или уменьшить */
     height: 40px;
     object-fit: cover;
     border-radius: 0px; /* мягкие углы логотипа */
