@@ -1,3 +1,4 @@
+/* Общие стили */
 html, body {
     margin: 0;
     padding: 0;
@@ -25,8 +26,6 @@ body {
     padding: 20px;
     max-width: 100%;
 }
-
-
 
 /* Логотип */
 .logo-big {
@@ -86,7 +85,7 @@ body {
 
 /* Карточка товара */
 .item {
-    background: rgba(255, 255, 255, 0); 
+    background: rgba(255, 255, 255, 0); /* прозрачная карточка */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
@@ -144,8 +143,4 @@ footer {
     font-size: 14px;
     color: #fff;
 }
-
-
-
-
 
