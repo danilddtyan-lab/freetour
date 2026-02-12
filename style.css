@@ -19,11 +19,37 @@ body {
 
 
 header {
-    background: transparent;  /* было #000 */
+    background: transparent;
     color: #fff;
     padding: 20px;
-    text-align: center;
 }
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff; /* можно убрать если не нужно */
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+.header-text p {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+}
+
 
 .container {
     max-width: 900px;
@@ -68,7 +94,7 @@ header {
     display: block;
     text-align: center;
     padding: 10px;
-    background: #FAC898;
+    background: #FF5F1F;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
