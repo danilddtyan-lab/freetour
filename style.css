@@ -26,7 +26,7 @@ body {
     color: #fff;
 }
 
-/* Контейнер логотипа с закруглённым прямоугольником */
+/* Контейнер логотипа с закруглённым прямоугольником 
 .logo-container {
     background: rgba(255, 255, 255, 0.2); 
     border-radius: 15px;
@@ -35,7 +35,7 @@ body {
     align-items: center;
     justify-content: center;
 }
- 
+ */
 /* Большой логотип */
 .logo-big {
     width: 130px;   
