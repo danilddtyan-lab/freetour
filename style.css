@@ -36,13 +36,13 @@ body {
 }
 
 .logo-container
-    flex: 0 0 auto; /* контейнер не растягивается 
-    background: rgba(255,255,255,0.2);
+    flex: 0 0 auto; 
+    backgrod: rgba(255,255,255,0.2);
     border-radius: 15px;
     padding: 10px 15px;
     display: flex;
     align-items: center;
-    justify-content: center; */
+    justify-content: center; 
 }
 
 .logo-big {
