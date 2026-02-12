@@ -21,7 +21,7 @@ body {
 header {
     background: transparent;
     color: #fff;
-    padding: 20px;
+    padding: 20px 0; /* только сверху и снизу */
 }
 
 .header-inner {
@@ -29,7 +29,8 @@ header {
     align-items: center;
     gap: 15px;
     max-width: 900px;
-    margin: 0 auto;
+    margin: 0 auto; /* центрирует текст, но логотип будем сдвигать */
+    position: relative;
 }
 
 .logo {
@@ -37,7 +38,15 @@ header {
     height: 60px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #fff; /* можно убрать если не нужно */
+    border: 2px solid #fff; /* можно убрать */
+    position: absolute;
+    left: 0;   /* прямо к левому краю */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header-text {
+    margin-left: 75px; /* отступ, чтобы текст не налезал на логотип */
 }
 
 .header-text h1 {
@@ -49,6 +58,7 @@ header {
     margin: 5px 0 0 0;
     font-size: 14px;
 }
+
 
 
 .container {
