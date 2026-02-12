@@ -17,7 +17,6 @@ body {
     color: #333;
 }
 
-
 header {
     background: transparent;
     color: #fff;
@@ -29,7 +28,7 @@ header {
     align-items: center;
     gap: 15px;
     max-width: 900px;
-    margin: 0 auto; /* центрирует текст, но логотип будем сдвигать */
+    margin: 0 auto; /* центр лого */
     position: relative;
 }
 
@@ -38,7 +37,7 @@ header {
     height: 60px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #fff; /* можно убрать */
+    border: 2px solid #fff; 
     position: absolute;
     left: 0;   /* прямо к левому краю */
     top: 50%;
@@ -58,6 +57,8 @@ header {
     margin: 5px 0 0 0;
     font-size: 14px;
 }
+
+
 
 
 
