@@ -49,6 +49,53 @@ body {
     margin-top: 5px;
     font-size: 16px;
 }
+.header-boxed {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    position: relative;
+    z-index: 10;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-text h1 {
+    margin: 0;
+    color: #ffffff;
+}
+
+.header-text p {
+    margin: 0;
+    color: #d0d0d0;
+}
+
+.nav a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #FF6B2C;
+}
+
+/* Кнопка контакты */
+.nav-btn {
+    background: #FF6B2C;
+    padding: 8px 18px;
+    border-radius: 6px;
+}
+
+.nav-btn:hover {
+    background: #e85c1f;
+    color: #ffffff;
+}
 
 /* Контейнер сайта */
 .container {
