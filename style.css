@@ -208,28 +208,28 @@ footer {
 }
 
 /* =========================
-   Страница "О нас"
+   Страница "О нас" — обновленный контейнер
 ========================= */
 
 .about-wrapper {
     display: flex;
     justify-content: center;
-    padding: 80px 20px;
+    padding: 40px 20px; /* уменьшено пространство сверху */
 }
 
 .about-container {
     background: #ffffff;
-    max-width: 1000px;
-    width: 100%;
-    border-radius: 12px
-    padding: 40px 60px 60px 60px;
+    width: 90%;            /* почти на весь экран */
+    max-width: 1200px;     /* не больше 1200px */
+    border-radius: 12px;
+    padding: 20px 40px 60px 40px; /* меньше сверху, норм по бокам и снизу */
     box-shadow: 0 10px 40px rgba(0,0,0,0.2);
     color: #222;
 }
 
 .about-title {
     text-align: center;
-    margin-bottom: 40px;
+    margin: 0 0 30px 0; /* почти нет сверху, немного снизу */
     font-size: 32px;
 }
 
@@ -253,7 +253,7 @@ footer {
     transform: scale(1.03);
 }
 
-/* Текст */
+/* Текст под фото */
 .about-text p {
     margin-bottom: 20px;
     line-height: 1.6;
@@ -267,8 +267,6 @@ footer {
     }
 
     .about-container {
-        padding: 40px 25px;
+        padding: 20px 25px 40px 25px;
     }
 }
-
-
