@@ -1,0 +1,18 @@
+struktura 
+/freetour
+│
+├── index.html
+├── onas.html
+├── contacts.html
+├── product.html
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   ├── theme.js
+│   ├── cart.js
+│   └── form.js
+│
+└── images/
+    └── 2023-Silk-Road-Mountain-Race-Josh-Ibbett_1.jpg
