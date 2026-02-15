@@ -1,15 +1,8 @@
-/* 🔥 Базовые стили */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Segoe UI', sans-serif;
     background: #0f0f0f;
     color: #fff;
-    transition: 0.3s;
+    margin: 0;
 }
 
 /* Светлая тема */
@@ -23,69 +16,58 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+    padding: 15px 40px;
     background: rgba(0,0,0,0.5);
     backdrop-filter: blur(10px);
     position: fixed;
     width: 100%;
-    z-index: 100;
+    z-index: 10;
 }
 
 .header-left {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
-.logo-container img,
+/* Логотип фиксированный, не растягивает hero */
 .logo-big {
-    height: 55px;       /* фиксированная высота */
-    width: auto;         /* сохраняем пропорции */
+    height: 55px;  /* высота логотипа */
+    width: auto;
     display: block;
 }
 
-.header-text h1 {
-    font-size: 20px;
-    margin-bottom: 2px;
-}
-
-.header-text p {
-    font-size: 12px;
-    opacity: 0.8;
-}
-
+/* Навигация */
 .nav a {
-    margin-left: 20px;
+    margin-left: 15px;
     text-decoration: none;
     color: #fff;
-    transition: 0.3s;
+    font-weight: 500;
 }
 
 .nav a:hover {
     color: #ff6a00;
 }
 
-/* Кнопки темы и корзины */
-.cart-btn {
-    background: #ff6a00;
-    color: white;
-    padding: 6px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-left: 10px;
-    border: none;
-    font-size: 14px;
+/* Hero — фоновое изображение Silk Road */
+.hero {
+    height: 100vh;
+    width: 100%;
+    background: url("../images/2023-Silk-Road-Mountain-Race-Josh-Ibbett_1.jpg") no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
-.cart-count {
-    background: black;
-    padding: 2px 6px;
-    border-radius: 50%;
-    font-size: 12px;
-    margin-left: 5px;
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4); /* полупрозрачный фильтр */
 }
 
-/* Каталог */
+/* Каталог карточки */
 .catalog {
     display: flex;
     flex-wrap: wrap;
@@ -95,17 +77,16 @@ body {
 }
 
 .item {
+    width: 250px; /* размер карточки */
     background: rgba(255,255,255,0.05);
-    padding: 15px;
-    border-radius: 12px;
+    padding: 10px;
+    border-radius: 10px;
     text-align: center;
-    width: 220px;
-    transition: 0.3s;
+    transition: transform 0.3s;
 }
 
 .item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    transform: translateY(-5px);
 }
 
 .item img {
@@ -116,7 +97,6 @@ body {
 
 .item-title {
     margin: 10px 0 5px;
-    font-size: 16px;
 }
 
 .item-price {
@@ -125,51 +105,17 @@ body {
 }
 
 .item-button {
-    display: inline-block;
-    margin-top: 5px;
     background: #ff6a00;
     color: #fff;
-    padding: 6px 12px;
     border-radius: 6px;
+    padding: 6px 12px;
     text-decoration: none;
-    font-size: 14px;
     cursor: pointer;
+    margin-top: 5px;
 }
 
-.item-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255,106,0,0.4);
-}
-
-/* Footer */
 footer {
     text-align: center;
     padding: 25px;
     background: #000;
-    margin-top: 40px;
 }
-
-/* Адаптив */
-@media(max-width: 768px) {
-    .header-boxed {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 15px 20px;
-        gap: 10px;
-    }
-
-    .header-left {
-        gap: 10px;
-    }
-
-    .catalog {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 140px;
-    }
-
-    .item {
-        width: 90%;
-    }
-}
-
