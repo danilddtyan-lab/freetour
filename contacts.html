@@ -3,100 +3,220 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Контакты</title>
+<title>Контакты | Freetour</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #6dd5ed, #2193b0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+font-family:'Segoe UI',sans-serif;
+background:url("2023-Silk-Road-Mountain-Race-Josh-Ibbett_1.jpg") no-repeat center center/cover;
+min-height:100vh;
+color:white;
+position:relative;
 }
 
-.container {
-    background: white;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    width: 100%;
-    max-width: 500px;
+body::before{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(3px);
+z-index:0;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
+/* HEADER */
+.header{
+position:relative;
+z-index:2;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 60px;
 }
 
-input, textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 16px;
+.logo{
+font-size:28px;
+font-weight:bold;
 }
 
-textarea {
-    resize: none;
-    height: 120px;
+.nav{
+display:flex;
+gap:25px;
 }
 
-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #2193b0;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
+.nav a{
+color:white;
+text-decoration:none;
+opacity:0.8;
+transition:0.3s;
 }
 
-button:hover {
-    background-color: #176d86;
+.nav a:hover{opacity:1}
+.active{color:#ff6a00;opacity:1}
+
+/* MAIN */
+.main{
+position:relative;
+z-index:2;
+display:flex;
+flex-direction:column;
+align-items:center;
+padding:40px 20px 80px;
+gap:40px;
 }
 
-.contact-info {
-    margin-top: 20px;
-    font-size: 14px;
-    color: #555;
+.card{
+width:100%;
+max-width:600px;
+padding:40px;
+border-radius:20px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,0.15);
+box-shadow:0 15px 40px rgba(0,0,0,0.6);
+animation:fadeUp .8s ease forwards;
+opacity:0;
 }
 
-.back-link {
-    display: block;
-    text-align: center;
-    margin-top: 15px;
-    text-decoration: none;
-    color: #2193b0;
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(25px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+h1{text-align:center;margin-bottom:25px}
+
+input,textarea{
+width:100%;
+padding:14px;
+margin-bottom:15px;
+border-radius:10px;
+border:none;
+outline:none;
+}
+
+textarea{height:120px;resize:none}
+
+button{
+width:100%;
+padding:15px;
+background:linear-gradient(45deg,#ff6a00,#ff8c42);
+border:none;
+border-radius:10px;
+color:white;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(255,106,0,0.5);
+}
+
+.secondary-btn{
+margin-top:10px;
+background:transparent;
+border:1px solid #ff6a00;
+}
+
+.secondary-btn:hover{
+background:#ff6a00;
+}
+
+.success{
+display:none;
+background:#28a745;
+padding:12px;
+border-radius:8px;
+margin-bottom:15px;
+text-align:center;
+}
+
+.contact-info{
+text-align:center;
+margin-top:20px;
+opacity:.85;
+line-height:1.6;
+}
+
+iframe{
+width:100%;
+height:250px;
+border-radius:15px;
+border:none;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.header{flex-direction:column;gap:10px;padding:20px}
+.nav{gap:15px}
+.card{padding:25px}
 }
 </style>
 </head>
-
 <body>
 
-<div class="container">
-    <h1>Связаться с нами</h1>
+<header class="header">
+<div class="logo">Freetour</div>
+<nav class="nav">
+<a href="index.html">Главная</a>
+<a href="#" class="active">Контакты</a>
+</nav>
+</header>
 
-    <form>
-        <input type="text" placeholder="Ваше имя" required>
-        <input type="email" placeholder="Ваш email" required>
-        <input type="tel" placeholder="Ваш телефон">
-        <textarea placeholder="Ваше сообщение" required></textarea>
-        <button type="submit">Отправить</button>
-    </form>
+<main class="main">
 
-    <div class="contact-info">
-        <p><strong>Телефон:</strong> +7 (___) ___-__-__</p>
-        <p><strong>Email:</strong> example@email.com</p>
-        <p><strong>Адрес:</strong> Ваш город, ул. Примерная, д. 1</p>
-    </div>
+<div class="card">
+<h1>Связаться с нами</h1>
 
-    <a href="index.html" class="back-link">← Вернуться на главную</a>
+<div class="success" id="successMessage">
+Спасибо! Сообщение отправлено 🚀
 </div>
 
-</body>
-</html>
+<form id="contactForm">
+
+<input type="text" id="name" placeholder="Ваше имя" required>
+<input type="email" id="email" placeholder="Ваш email" required>
+<input type="tel" id="phone" placeholder="Телефон">
+<textarea id="message" placeholder="Ваше сообщение" required></textarea>
+
+<button type="submit">Отправить сообщение</button>
+<button type="button" class="secondary-btn" onclick="consultation()">Запросить консультацию</button>
+
+</form>
+
+<div class="contact-info">
+📞 +996 ___ ___ ___ <br>
+✉ info@freetour.kg <br>
+📍 Бишкек, Кыргызстан
+</div>
+
+</div>
+
+<div class="card">
+<h1>Мы на карте</h1>
+<iframe 
+src="https://www.google.com/maps?q=Бишкек&output=embed">
+</iframe>
+</div>
+
+</main>
+
+<script>
+const BOT_TOKEN="YOUR_BOT_TOKEN";
+const CHAT_ID="YOUR_CHAT_ID";
+const FORMSPREE="YOUR_FORMSPREE_LINK";
+
+document.getElementById("contactForm").addEventListener("submit", async function(e){
+e.preventDefault();
+
+const name=document.getElementById("name").value;
+const email=document.getElementById("email").value;
+const phone=document.getElementById("phone").value;
+const message=document.getElementById("message").value;
+
+const text=`Новая заявка Freetour:%0AИмя: ${name}%0AEmail: ${email}%0AТелефон: ${phone}%0AСообщение: ${message}`;
+
+/* Telegram*
+
