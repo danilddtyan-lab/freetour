@@ -269,3 +269,8 @@ footer {
         padding: 20px 25px 40px 25px;
     }
 }
+
+body {
+  cursor: url("cursor.png") 16 16, auto;
+}
+
