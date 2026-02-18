@@ -51,7 +51,7 @@
 
     <div class="header-text">
         <h1>Freetour</h1>
-        <p>Всё для байкпакинга</p>
+        <p>все для байкпакинга</p>
     </div>
 </div>
 
@@ -60,7 +60,7 @@
     <a href="onas.html">О нас</a>
     <a href="contacts.html" class="nav-btn">Контакты</a>
 
-    <button id="themeToggle" class="cart-btn">🌙</button>
+   
     <button class="cart-btn" onclick="showCart()">
         🛒 <span id="cartCount" class="cart-count">0</span>
     </button>
@@ -125,12 +125,12 @@
 
 <script>
 
-/* 🌙 Переключатель темы */
+/*  Переключатель темы */
 document.getElementById("themeToggle").addEventListener("click", function() {
     document.body.classList.toggle("light-mode");
 });
 
-/* 🛒 Корзина */
+/*  Корзина */
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function updateCartCount(){
@@ -151,7 +151,7 @@ function showCart(){
     }
 
     let total = 0;
-    let message = "🛒 Ваша корзина:\n\n";
+    let message = " Ваша корзина:\n\n";
 
     cart.forEach(item => {
         message += item.product + " — " + item.price + " сом\n";
