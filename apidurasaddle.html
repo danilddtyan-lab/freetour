@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-/* ===== Основной контейнер страницы товара ===== */
+/* Основной контейнер страницы товара */
 .product-page {
     max-width: 1100px;
     margin: 40px auto;
@@ -15,14 +15,14 @@
     border-radius: 15px;
 }
 
-/* ===== Сетка: галерея + информация ===== */
+/* Сетка: галерея + информация  */
 .product-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
 }
 
-/* ===== Блок галереи ===== */
+/* Блок галереи */
 .product-gallery {
     position: relative;
 }
@@ -76,7 +76,7 @@
     border: 2px solid orange;
 }
 
-/* ===== Информация о товаре ===== */
+/* Информация о товаре  */
 .product-title {
     font-size: 32px;
     margin-bottom: 15px;
@@ -120,7 +120,7 @@
     opacity: 1;
 }
 
-/* ===== Адаптив ===== */
+/*  Адаптив */
 @media (max-width: 900px) {
     .product-wrapper {
         grid-template-columns: 1fr;
@@ -131,7 +131,7 @@
 
 <body>
 
-<!-- ===== Страница товара ===== -->
+<!-- Страница товара ===== -->
 <div class="product-page">
 
     <div class="product-wrapper">
@@ -158,25 +158,25 @@
 
         </div>
 
-        <!-- ===== Информация о товаре ===== -->
+     
         <div>
 
-            <!-- Название -->
+         
             <h1 class="product-title">
                 Apidura saddle pack
             </h1>
 
-            <!-- Цена -->
+         
             <div class="product-price">
                 Цена от 22000 сом
             </div>
 
-            <!-- Описание -->
+           
             <div class="product-description">
                 Apidura Expedition Saddle Pack — водонепроницаемая и сверхпрочная подседельная сумка для длительных велопоходов и экспедиций. Она сделана из лёгкого многослойного ламинированного материала с RF‑сварными швами и надёжно крепится под седлом без багажника. Съёмная трёхточечная анти‑свай система удерживает сумку жёстко в любых условиях. Объём регулируется системой roll‑top, а внешние крепления дают дополнитель место для снаряжения. Доступна в трёх объёмах — 9 л, 14 л и 17 л, чтобы подобрать нужный размер под разные путешествия. Apidura — проверенный выбор для самых больших гонок и приключений, где надёжность и защита снаряжения критичны
             </div>
 
-            <!-- Кнопка заказа -->
+           
             <a href="https://instagram.com/freetour.kg" class="item-button">
                 Заказать
             </a>
@@ -193,7 +193,7 @@
     </div>
 </div>
 
-<!-- ===== JS для листания фото ===== -->
+<!-- JS для листания фото -->
 <script>
 const mainImage = document.getElementById("mainImage");
 const thumbs = document.querySelectorAll(".thumb");
