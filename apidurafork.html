@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-/* ===== Основной контейнер страницы товара ===== */
+/* Основной контейнер страницы товара */
 .product-page {
     max-width: 1100px;
     margin: 40px auto;
@@ -15,14 +15,14 @@
     border-radius: 15px;
 }
 
-/* ===== Сетка: галерея + информация ===== */
+
 .product-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
 }
 
-/* ===== Блок галереи ===== */
+/*Блок галереи  */
 .product-gallery {
     position: relative;
 }
@@ -76,7 +76,7 @@
     border: 2px solid orange;
 }
 
-/* ===== Информация о товаре ===== */
+/* Информация о товаре*/
 .product-title {
     font-size: 32px;
     margin-bottom: 15px;
@@ -120,7 +120,7 @@
     opacity: 1;
 }
 
-/* ===== Адаптив ===== */
+/* оптимизация под телефон */
 @media (max-width: 900px) {
     .product-wrapper {
         grid-template-columns: 1fr;
@@ -131,24 +131,24 @@
 
 <body>
 
-<!-- ===== Страница товара ===== -->
+
 <div class="product-page">
 
     <div class="product-wrapper">
 
-        <!-- ===== Галерея с листанием ===== -->
+      
         <div class="product-gallery">
 
-            <!-- Главное изображение -->
+           
             <img id="mainImage" class="main-image"
                  src="apidura-apidura-expedition-fork-pack-3l.jpg"
                  alt="Apidura fork pack">
 
-            <!-- Кнопки переключения -->
+         
             <button class="nav-btn prev">&#10094;</button>
             <button class="nav-btn next">&#10095;</button>
 
-            <!-- Миниатюры -->
+       
             <div class="thumbnails">
                 <img src="Apidura-Expedition-Fork-Pack-Review-13.jpg" class="thumb active">
                 <img src="Apidura-Expedition-Fork-Pack-Review-Share.jpg" class="thumb">
@@ -157,32 +157,32 @@
 
         </div>
 
-        <!-- ===== Информация о товаре ===== -->
+/* информация о товаре */
         <div>
 
-            <!-- Название -->
+        
             <h1 class="product-title">
                 Apidura fork pack
             </h1>
 
-            <!-- Цена -->
+         
             <div class="product-price">
                 Цена от 9800 сом
             </div>
 
-            <!-- Описание -->
+           
             <div class="product-description">
                 Apidura Expedition Fork Pack — премиальная сумка для байкпакинга, часть серии Expedition, разработанная для установки на вилку через крепления на cargo cage. Изготовлена из лёгкого трёхслойного ламинированного материала, устойчивого к разрывам и истиранию, с полностью герметичными швами для полной водонепроницаемости в любых условиях. Доступна в объёмах 3 л и 4 л, идеальна для длительных велопоходов и экспедиций, где важны лёгкость и надёжность.
             </div>
 
-            <!-- Кнопка заказа -->
+           
             <a href="https://instagram.com/freetour.kg" class="item-button">
                 Заказать
             </a>
 
             <br>
 
-            <!-- Ссылка назад в каталог -->
+           
             <a href="index.html" class="back-link">
                 ← Вернуться в каталог
             </a>
@@ -192,7 +192,7 @@
     </div>
 </div>
 
-<!-- ===== JS для листания фото ===== -->
+<! JS для листания фото взят готовый блок   -->
 <script>
 const mainImage = document.getElementById("mainImage");
 const thumbs = document.querySelectorAll(".thumb");
