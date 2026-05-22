@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>rhinowalk сумка на вилку</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* Основной контейнер страницы товара */
+.product-page {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 1); /* белый цвет */
+    border-radius: 15px;
+}
+
+.product-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* Блок галереи */
+.product-gallery {
+    position: relative;
+}
+
+.main-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Кнопки навигации */
+.nav-btn {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 8px 14px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.nav-btn:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+/*галерея */
+.thumbnails {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.thumbnails img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 6px;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.thumbnails img.active,
+.thumbnails img:hover {
+    opacity: 1;
+    border: 2px solid orange;
+}
+
+/* Информация о товаре  */
+.product-title {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.product-price {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.product-description {
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Кнопка заказа */
+.item-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: orange;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.item-button:hover {
+    background: darkorange;
+}
+
+/* Ссылка назад */
+.back-link {
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
+    color: black;
+    opacity: 0.7;
+}
+
+.back-link:hover {
+    opacity: 1;
+}
+
+/*  Адаптив для телефона */
+@media (max-width: 900px) {
+    .product-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Страница товара -->
+<div class="product-page">
+
+    <div class="product-wrapper">
+
+        <!--Галерея с листанием -->
+        <div class="product-gallery">
+
+            <!-- Главное изображение -->
+            <img id="mainImage" class="main-image"
+                 src="tb_image_share_1770908212687.png"
+                 alt="нарульная сумка">
+
+            <!-- Кнопки переключения -->
+            <button class="nav-btn prev">&#10094;</button>
+            <button class="nav-btn next">&#10095;</button>
+
+            <!--фото в галерее -->
+            <div class="thumbnails">
+                <img src="photo_5224238614034718196_y.jpg" class="thumb active"
+                <img src="photo_5224238614034718197_y.jpg" class="thumb">
+                <img src="photo_5224238614034718198_y.jpg" class="thumb">
+                <img src="photo_5224238614034718198_y.jpg" class="thumb">
+            </div>
+
+        </div>
+
+     
+        <div>
+            
+            <h1 class="product-title">
+               rhinowalk сумка на вилку
+            </h1>  
+            
+            <div class="product-price">
+                Цена от 3000 сом
+            </div>
+            
+            <div class="product-description">
+                Вилочная сумка от Rhinowalk — практичное решение для байкпакинга, путешествий и длительных веломаршрутов. Сумка надежно крепится на вилку велосипеда и позволяет удобно распределить груз, освобождая место в основной раме и на руле.
+
+Изготовлена из прочных влагозащитных материалов, устойчива к пыли, грязи и сложным погодным условиям. Подходит для перевозки одежды, инструментов, спальника, бутылок и другого снаряжения. Благодаря надежной системе крепления сумка хорошо держится даже на неровной дороге.
+
+Отличный выбор для велотуризма, дальних поездок и ежедневных приключений на велосипеде.23
+              
+            </div>
+
+           
+            <a href="https://instagram.com/freetour.kg" class="item-button">
+                Заказать
+            </a>
+            <br>
+            <!-- Ссылка назад в каталог -->
+            <a href="index.html" class="back-link">
+                ← Вернуться в каталог
+            </a>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- JS для листания фото -->
+<script>
+const mainImage = document.getElementById("mainImage");
+const thumbs = document.querySelectorAll(".thumb");
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
+
+let currentIndex = 0;
+
+function updateImage(index) {
+    currentIndex = index;
+    mainImage.src = thumbs[index].src;
+    thumbs.forEach(t => t.classList.remove("active"));
+    thumbs[index].classList.add("active");
+}
+
+thumbs.forEach((thumb, index) => {
+    thumb.addEventListener("click", () => updateImage(index));
+});
+
+prev.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + thumbs.length) % thumbs.length;
+    updateImage(currentIndex);
+});
+
+next.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % thumbs.length;
+    updateImage(currentIndex);
+});
+</script>
+
+</body>
+</html>
