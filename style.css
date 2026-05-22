@@ -1,6 +1,4 @@
-/* ===============
-   Общие стили
-====== */
+
 
 html, body {
     margin: 0;
@@ -23,9 +21,7 @@ body {
 
 }
 
-/* =========================
-   Header
-========================= */
+/* header*/
 
 .header-boxed {
     display: flex;
@@ -62,9 +58,7 @@ body {
     color: #d0d0d0;
 }
 
-/* =============
-   Навигация
-========== */
+/* навигация*/
 
 .nav a {
     margin-left: 30px;
@@ -90,9 +84,7 @@ body {
     color: #ffffff;
 }
 
-/* ==============
-   Контейнер сайта
-=============== */
+/*контейнер весь сайт*/
 
 .container {
     max-width: 1200px; 
@@ -100,9 +92,7 @@ body {
     padding: 20px;
 }
 
-/* ===========
-   Каталог товаров
-===== */
+/*каталог*/
 
 .catalog {
     display: grid;
@@ -223,14 +213,14 @@ footer {
     width: 90%;            /* почти на весь экран */
     max-width: 1200px;     /* не больше 1200px для компа */
     border-radius: 12px;
-    padding: 20px 40px 60px 40px; /* меньше сверху, норм по бокам и снизу */
+    padding: 20px 40px 60px 40px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.2);
     color: #222;
 }
 
 .about-title {
     text-align: center;
-    margin: 0 0 30px 0; /* почти нет сверху, немного снизу */
+    margin: 0 0 30px 0; /*отступ границы карточки */
     font-size: 32px;
 }
 
@@ -261,7 +251,7 @@ footer {
     font-size: 16px;
 }
 
-/* Адаптив для телефон */
+/* Адаптив для телефона */
 @media (max-width: 800px) {
     .about-photos {
         grid-template-columns: 1fr;
