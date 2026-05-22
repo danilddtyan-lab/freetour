@@ -17,24 +17,6 @@
     transform: translateY(-8px);
 }
 
-/* 🛒 Корзина */
-.cart-btn {
-    background: #ff6a00;
-    color: white;
-    padding: 8px 14px;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-left: 15px;
-    border: none;
-}
-
-.cart-count {
-    background: black;
-    padding: 2px 6px;
-    border-radius: 50%;
-    font-size: 12px;
-    margin-left: 5px;
-}
 </style>
 
 </head>
@@ -45,7 +27,7 @@
 <div class="header-left">
     <div class="logo-container">
         <a href="index.html">
-            <img src="Picsart_26-02-12_18-29-18-194.png" alt="Логотип Freetour" class="logo-big">
+            <img src="Picsart_26-02-12_18-29-18-194.png" alt="Лого" class="logo-big">
         </a>
     </div>
 
@@ -60,9 +42,6 @@
     <a href="onas.html">О нас</a>
     <a href="contacts.html" class="nav-btn">Контакты</a>
 
-   
-    <button class="cart-btn" onclick="showCart()">
-        🛒 <span id="cartCount" class="cart-count">0</span>
     </button>
 </nav>
 
@@ -92,6 +71,7 @@
 <button class="item-button" onclick="addToCart('Rhinowalk Handlebar', 2000)">В корзину</button>
 <a href="rhinowalkbar.html" class="item-button">Подробнее</a>
 </div>
+    
 </article>
 
 <!-- Apidura Fork -->
@@ -103,6 +83,7 @@
 <button class="item-button" onclick="addToCart('Apidura Fork Pack', 9800)">В корзину</button>
 <a href="apidurafork.html" class="item-button">Подробнее</a>
 </div>
+    
 </article>
 
 <!-- Apidura Saddle -->
@@ -125,13 +106,8 @@
 
 <script>
 
-/*  Переключатель темы */
-document.getElementById("themeToggle").addEventListener("click", function() {
-    document.body.classList.toggle("light-mode");
-});
 
 
-</script>
 
 </body>
 </html>
