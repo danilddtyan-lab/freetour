@@ -161,6 +161,30 @@
     </div>
 
 </div>
+<!-- JS ЛИСТАНИЕ ФОТО -->
+<script>
 
+const mainImage = document.getElementById("mainImage");
+const thumbs = document.querySelectorAll(".thumb");
+
+let currentIndex = 0;
+
+// смена фото
+function setImage(index) {
+    currentIndex = index;
+    mainImage.src = thumbs[index].src;
+
+    thumbs.forEach(t => t.classList.remove("active"));
+    thumbs[index].classList.add("active");
+}
+
+// клик по миниатюрам
+thumbs.forEach((img, index) => {
+    img.addEventListener("click", () => {
+        setImage(index);
+    });
+});
+
+</script>
 </body>
 </html>
