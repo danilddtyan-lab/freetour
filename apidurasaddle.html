@@ -6,23 +6,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-/* Основной контейнер страницы товара */
+
+/* основной контейнер товара */
 .product-page {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 40px auto;
     padding: 30px;
-    background: rgba(255, 255, 255, 1); /* Белый фон */
+    background: #fff;
     border-radius: 15px;
 }
 
-/* Сетка: галерея + информация  */
+/* сетка */
 .product-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
 }
 
-/* Блок галереи */
+/* галерея */
 .product-gallery {
     position: relative;
 }
@@ -32,13 +33,13 @@
     border-radius: 10px;
 }
 
-/* Кнопки навигации */
+/* кнопки листания */
 .nav-btn {
     position: absolute;
     top: 45%;
     transform: translateY(-50%);
     background: rgba(0,0,0,0.5);
-    color: white;
+    color: #fff;
     border: none;
     font-size: 24px;
     padding: 8px 14px;
@@ -53,7 +54,7 @@
     background: rgba(0,0,0,0.8);
 }
 
-/* Миниатюры */
+/* миниатюры */
 .thumbnails {
     display: flex;
     gap: 10px;
@@ -76,29 +77,33 @@
     border: 2px solid orange;
 }
 
-/* Информация о товаре  */
+/* текст товара */
 .product-title {
-    font-size: 32px;
-    margin-bottom: 15px;
+    font-size: 34px;
+    margin-bottom: 10px;
+    color: #111;
 }
 
 .product-price {
     font-size: 22px;
     font-weight: bold;
     margin-bottom: 20px;
+    color: #111;
 }
 
 .product-description {
-    line-height: 1.6;
+    font-size: 17px;
+    line-height: 1.8;
     margin-bottom: 25px;
+    color: #111;
 }
 
-/* Кнопка заказа */
+/* кнопка */
 .item-button {
     display: inline-block;
     padding: 12px 20px;
     background: orange;
-    color: white;
+    color: #fff;
     text-decoration: none;
     border-radius: 8px;
 }
@@ -107,12 +112,12 @@
     background: darkorange;
 }
 
-/* Ссылка назад */
+/* назад */
 .back-link {
     display: inline-block;
     margin-top: 30px;
     text-decoration: none;
-    color: black;
+    color: #333;
     opacity: 0.7;
 }
 
@@ -120,65 +125,63 @@
     opacity: 1;
 }
 
-/*  Адаптив для телефона */
+/* адаптив */
 @media (max-width: 900px) {
     .product-wrapper {
         grid-template-columns: 1fr;
     }
 }
+
 </style>
 </head>
 
 <body>
 
-<!-- Страница товара ===== -->
 <div class="product-page">
 
     <div class="product-wrapper">
 
-        <!-- ===== Галерея с листанием ===== -->
+        <!-- галерея -->
         <div class="product-gallery">
 
-            <!-- Главное изображение -->
             <img id="mainImage" class="main-image"
                  src="tb_image_share_1770908212687.png"
-                 alt="Антон Коллегин">
+                 alt="Apidura saddle pack">
 
-            <!-- Кнопки переключения -->
             <button class="nav-btn prev">&#10094;</button>
             <button class="nav-btn next">&#10095;</button>
 
-            <!-- Миниатюры -->
             <div class="thumbnails">
-                <img src="tb_image_share_1770908212687 (2).png" class="thumb active"
-                <img src="apidura-expedition-saddle-pack-9l-capacity-guide-kitgrid.jpg" class="thumb">
-                <img src="apidura-expedition-saddle-pack-17l-kit-grid_1024x1024.webp" class="thumb">
-                <img src="apidura-saddle-pack-dry_main.jpg" class="thumb">
+
+                <img src="tb_image_share_1770908212687.png" class="thumb active" alt="1">
+
+                <img src="apidura-expedition-saddle-pack-9l-capacity-guide-kitgrid.jpg" class="thumb" alt="2">
+
+                <img src="apidura-expedition-saddle-pack-17l-kit-grid_1024x1024.webp" class="thumb" alt="3">
+
+                <img src="apidura-saddle-pack-dry_main.jpg" class="thumb" alt="4">
+
             </div>
 
         </div>
 
-     
+        <!-- описание -->
         <div>
-            
-            <h1 class="product-title">
-                Apidura saddle pack
-            </h1>  
-            
-            <div class="product-price">
-                Цена от 22000 сом
-            </div>
-            
+
+            <h1 class="product-title">Apidura Saddle Pack</h1>
+
+            <div class="product-price">Цена от 22000 сом</div>
+
             <div class="product-description">
-                Apidura Expedition Saddle Pack — водонепроницаемая и сверхпрочная подседельная сумка для длительных велопоходов и экспедиций. Она сделана из лёгкого многослойного ламинированного материала с RF‑сварными швами и надёжно крепится под седлом без багажника. Съёмная трёхточечная анти‑свай система удерживает сумку жёстко в любых условиях. Объём регулируется системой roll‑top, а внешние крепления дают дополнитель место для снаряжения. Доступна в трёх объёмах — 9 л, 14 л и 17 л, чтобы подобрать нужный размер под разные путешествия. Apidura — проверенный выбор для самых больших гонок и приключений, где надёжность и защита снаряжения критичны
+                Apidura Expedition Saddle Pack — водонепроницаемая и сверхпрочная подседельная сумка для длительных велопоходов и экспедиций. Сделана из лёгкого ламинированного материала с герметичными швами и системой roll-top. Надёжно фиксируется под седлом и не требует багажника.
             </div>
 
-           
-            <a href="https://instagram.com/freetour.kg" class="item-button">
+            <a href="https://instagram.com/freetour.kg" class="item-button" target="_blank">
                 Заказать
             </a>
+
             <br>
-            <!-- Ссылка назад в каталог -->
+
             <a href="index.html" class="back-link">
                 ← Вернуться в каталог
             </a>
@@ -186,10 +189,11 @@
         </div>
 
     </div>
+
 </div>
 
-<!-- JS для листания фото -->
 <script>
+
 const mainImage = document.getElementById("mainImage");
 const thumbs = document.querySelectorAll(".thumb");
 const prev = document.querySelector(".prev");
@@ -200,6 +204,7 @@ let currentIndex = 0;
 function updateImage(index) {
     currentIndex = index;
     mainImage.src = thumbs[index].src;
+
     thumbs.forEach(t => t.classList.remove("active"));
     thumbs[index].classList.add("active");
 }
@@ -217,6 +222,7 @@ next.addEventListener("click", () => {
     currentIndex = (currentIndex + 1) % thumbs.length;
     updateImage(currentIndex);
 });
+
 </script>
 
 </body>
