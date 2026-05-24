@@ -2,14 +2,14 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>Apidura fork pack</title>
+<title>Apidura fork Pack</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet" href="style.css">
 
 <style>
 
-/* Основной контейнер страницы товара */
+/* страница товара */
 .product-page {
     max-width: 1100px;
     margin: 40px auto;
@@ -18,52 +18,20 @@
     border-radius: 15px;
 }
 
-/* Контейнер товара */
+/* сетка */
 .product-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
 }
 
-/* Галерея */
-.product-gallery {
-    position: relative;
-}
-
-/* Главное изображение */
+/* главное фото */
 .main-image {
     width: 100%;
     border-radius: 10px;
 }
 
-/* Кнопки галереи */
-.gallery-btn {
-    position: absolute;
-    top: 45%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.5);
-    color: white;
-    border: none;
-    font-size: 24px;
-    padding: 8px 14px;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: 0.3s;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-.gallery-btn:hover {
-    background: rgba(0,0,0,0.8);
-}
-
-/* Миниатюры */
+/* мини фото */
 .thumbnails {
     display: flex;
     gap: 10px;
@@ -75,21 +43,19 @@
     height: 70px;
     object-fit: cover;
     cursor: pointer;
-    border-radius: 6px;
     opacity: 0.6;
-    transition: 0.3s;
+    border-radius: 6px;
 }
 
-.thumbnails img.active,
 .thumbnails img:hover {
     opacity: 1;
     border: 2px solid orange;
 }
 
-/* Информация о товаре */
+/* текст */
 .product-title {
     font-size: 32px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .product-price {
@@ -103,7 +69,7 @@
     margin-bottom: 25px;
 }
 
-/* Кнопка заказа */
+/* кнопка */
 .item-button {
     display: inline-block;
     padding: 12px 20px;
@@ -111,42 +77,14 @@
     color: white;
     text-decoration: none;
     border-radius: 8px;
-    transition: 0.3s;
 }
 
-.item-button:hover {
-    background: darkorange;
-}
-
-/* Ссылка назад */
 .back-link {
     display: inline-block;
     margin-top: 30px;
     text-decoration: none;
     color: black;
     opacity: 0.7;
-    transition: 0.3s;
-}
-
-.back-link:hover {
-    opacity: 1;
-}
-
-/* Адаптация под телефон */
-@media (max-width: 900px) {
-
-    .product-wrapper {
-        grid-template-columns: 1fr;
-    }
-
-    .product-page {
-        padding: 20px;
-        margin: 20px;
-    }
-
-    .product-title {
-        font-size: 26px;
-    }
 }
 
 </style>
@@ -154,17 +92,12 @@
 
 <body>
 
+<!-- ХЕДЕР -->
 <header class="header-boxed">
 
     <div class="header-left">
 
-        <div class="logo-container">
-            <a href="index.html">
-                <img src="Picsart_26-02-12_18-29-18-194.png"
-                     alt="Лого"
-                     class="logo-big">
-            </a>
-        </div>
+        <img src="Picsart_26-02-12_18-29-18-194.png" class="logo-big" alt="logo">
 
         <div class="header-text">
             <h1>Freetour</h1>
@@ -176,31 +109,24 @@
     <nav class="nav">
         <a href="index.html">Главная</a>
         <a href="onas.html">О нас</a>
-        <a href="contacts.html" class="nav-btn">Контакты</a>
+        <a href="contacts.html">Контакты</a>
     </nav>
 
 </header>
 
+<!-- ТОВАР -->
 <div class="product-page">
 
     <div class="product-wrapper">
 
-        <!-- Галерея -->
-        <div class="product-gallery">
+        <!-- фото -->
+        <div>
 
-            <img id="mainImage"
-                 class="main-image"
-                 src="apidura-apidura-expedition-fork-pack-3l.jpg"
-                 alt="Apidura fork pack">
+            <img src="tb_image_share_1770908212687.png" class="main-image" alt="товар">
 
-            <!-- Кнопки -->
-            <button class="gallery-btn prev">&#10094;</button>
-            <button class="gallery-btn next">&#10095;</button>
-
-            <!-- Миниатюры -->
             <div class="thumbnails">
 
-                <img src="apidura-apidura-expedition-fork-pack-3l.jpg"
+               <img src="apidura-apidura-expedition-fork-pack-3l.jpg"
                      class="thumb active"
                      alt="Фото 1">
 
@@ -211,45 +137,31 @@
                 <img src="Apidura-Expedition-Fork-Pack-Review-Share.jpg"
                      class="thumb"
                      alt="Фото 3">
-
             </div>
 
         </div>
 
-        <!-- Информация -->
+        <!-- текст -->
         <div>
 
-            <h1 class="product-title">
-                Apidura Fork Pack
-            </h1>
+            <h1 class="product-title">Apidura fork Pack</h1>
 
-            <div class="product-price">
-                Цена от 9800 сом
-            </div>
+            <div class="product-price">10000 сом</div>
 
             <div class="product-description">
+                Apidura Fork Pack — лёгкая и прочная сумка для байкпакинга, которая крепится на вилку велосипеда через крепления cargo cage. 
 
-                Apidura Expedition Fork Pack — премиальная сумка
-                для байкпакинга, разработанная для установки
-                на вилку через cargo cage.
+Она создана для длительных поездок и экспедиций, когда важно распределить вес и освободить место в основном багажнике.
 
-                Изготовлена из лёгкого трёхслойного
-                ламинированного материала,
-                устойчивого к разрывам и истиранию.
+Сумка сделана из водонепроницаемого ламинированного материала и полностью защищает вещи от дождя, грязи и пыли.
 
-                Полностью герметичные швы обеспечивают
-                надёжную защиту от дождя и грязи.
+Благодаря компактной форме и надёжному креплению Fork Pack не болтается на неровных дорогах и подходит для любых условий — от горных маршрутов до дальних велопоходов.
 
-                Доступна в объёмах 3L и 4L —
-                отличный вариант для длительных
-                велопутешествий и экспедиций.
-
+Идеальный выбор для тех, кто хочет увеличить объём багажа без утяжеления велосипеда.
             </div>
 
-            <a href="https://instagram.com/freetour.kg"
-               target="_blank"
-               class="item-button">
-               Заказать
+            <a href="https://instagram.com/freetour.kg" class="item-button">
+                Заказать
             </a>
 
             <br>
@@ -263,58 +175,6 @@
     </div>
 
 </div>
-
-<!-- JS галереи -->
-<script>
-
-const mainImage = document.getElementById("mainImage");
-const thumbs = document.querySelectorAll(".thumb");
-
-const prev = document.querySelector(".prev");
-const next = document.querySelector(".next");
-
-let currentIndex = 0;
-
-function updateImage(index) {
-
-    currentIndex = index;
-
-    mainImage.src = thumbs[index].src;
-
-    thumbs.forEach(thumb => {
-        thumb.classList.remove("active");
-    });
-
-    thumbs[index].classList.add("active");
-}
-
-thumbs.forEach((thumb, index) => {
-
-    thumb.addEventListener("click", () => {
-        updateImage(index);
-    });
-
-});
-
-prev.addEventListener("click", () => {
-
-    currentIndex =
-        (currentIndex - 1 + thumbs.length) % thumbs.length;
-
-    updateImage(currentIndex);
-
-});
-
-next.addEventListener("click", () => {
-
-    currentIndex =
-        (currentIndex + 1) % thumbs.length;
-
-    updateImage(currentIndex);
-
-});
-
-</script>
 
 </body>
 </html>
