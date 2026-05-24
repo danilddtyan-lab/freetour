@@ -2,113 +2,36 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>Apidura подседельная сумка</title>
+<title>Apidura Saddle Pack</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
 
 <style>
 
-/* шапка сайта */
-
-.header-boxed {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 60px;
-    background: rgba(0,0,0,0.3);
-}
-
-.header-left {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-/* логотип */
-
-.logo-big {
-    width: 120px;
-    height: auto;
-}
-
-/* текст в шапке */
-
-.header-text h1 {
-    margin: 0;
-    color: #fff;
-    font-size: 28px;
-}
-
-.header-text p {
-    margin: 0;
-    color: #ddd;
-    font-size: 14px;
-}
-
-/* меню */
-
-.nav a {
-    margin-left: 25px;
-    text-decoration: none;
-    color: #fff;
-}
-
-.nav a:hover {
-    color: orange;
-}
-
-/* блок товара */
-
+/* страница товара */
 .product-page {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 40px auto;
     padding: 30px;
-    background: #fff;
+    background: white;
     border-radius: 15px;
 }
 
-/* сетка товара */
-
+/* сетка */
 .product-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
 }
 
-/* галерея */
-
-.product-gallery {
-    position: relative;
-}
-
+/* главное фото */
 .main-image {
     width: 100%;
     border-radius: 10px;
 }
 
-/* стрелки */
-
-.nav-btn {
-    position: absolute;
-    top: 45%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.5);
-    color: #fff;
-    border: none;
-    font-size: 24px;
-    padding: 8px 14px;
-    cursor: pointer;
-    border-radius: 6px;
-}
-
-.prev { left: 10px; }
-.next { right: 10px; }
-
-.nav-btn:hover {
-    background: rgba(0,0,0,0.8);
-}
-
-/* миниатюры */
-
+/* мини фото */
 .thumbnails {
     display: flex;
     gap: 10px;
@@ -120,72 +43,48 @@
     height: 70px;
     object-fit: cover;
     cursor: pointer;
-    border-radius: 6px;
     opacity: 0.6;
+    border-radius: 6px;
 }
 
-.thumbnails img.active,
 .thumbnails img:hover {
     opacity: 1;
     border: 2px solid orange;
 }
 
-/* текст товара */
-
+/* текст */
 .product-title {
     font-size: 32px;
     margin-bottom: 10px;
-    color: #111;
 }
 
 .product-price {
     font-size: 22px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #111;
 }
 
 .product-description {
-    font-size: 17px;
-    line-height: 1.8;
+    line-height: 1.7;
     margin-bottom: 25px;
-    color: #111;
 }
 
-/* кнопка заказа */
-
+/* кнопка */
 .item-button {
     display: inline-block;
     padding: 12px 20px;
     background: orange;
-    color: #fff;
+    color: white;
     text-decoration: none;
     border-radius: 8px;
 }
-
-/* ссылка назад */
 
 .back-link {
     display: inline-block;
     margin-top: 30px;
     text-decoration: none;
-    color: #333;
+    color: black;
     opacity: 0.7;
-}
-
-/* адаптив */
-
-@media (max-width: 900px) {
-
-    .product-wrapper {
-        grid-template-columns: 1fr;
-    }
-
-    .header-boxed {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
 }
 
 </style>
@@ -193,15 +92,13 @@
 
 <body>
 
-<!-- шапка сайта -->
+<!-- ХЕДЕР -->
 <header class="header-boxed">
 
     <div class="header-left">
 
-        <!-- логотип -->
         <img src="Picsart_26-02-12_18-29-18-194.png" class="logo-big" alt="logo">
 
-        <!-- название -->
         <div class="header-text">
             <h1>Freetour</h1>
             <p>все для байкпакинга</p>
@@ -209,7 +106,6 @@
 
     </div>
 
-    <!-- меню -->
     <nav class="nav">
         <a href="index.html">Главная</a>
         <a href="onas.html">О нас</a>
@@ -218,97 +114,53 @@
 
 </header>
 
-<!-- товар -->
+<!-- ТОВАР -->
 <div class="product-page">
 
     <div class="product-wrapper">
 
-        <!-- галерея -->
-        <div class="product-gallery">
+        <!-- фото -->
+        <div>
 
-            <img id="mainImage" class="main-image"
-                 src="tb_image_share_1770908212687.png"
-                 alt="товар">
+            <img src="tb_image_share_1770908212687.png" class="main-image" alt="товар">
 
-            <!-- стрелки -->
-            <button class="nav-btn prev">&#10094;</button>
-            <button class="nav-btn next">&#10095;</button>
-
-            <!-- мини картинки -->
             <div class="thumbnails">
 
-                <img src="tb_image_share_1770908212687.png" class="thumb active">
-                <img src="apidura-expedition-saddle-pack-9l-capacity-guide-kitgrid.jpg" class="thumb">
-                <img src="apidura-expedition-saddle-pack-17l-kit-grid_1024x1024.webp" class="thumb">
-                <img src="apidura-saddle-pack-dry_main.jpg" class="thumb">
+                <img src="tb_image_share_1770908212687.png" alt="">
+                <img src="apidura-expedition-saddle-pack-9l-capacity-guide-kitgrid.jpg" alt="">
+                <img src="apidura-expedition-saddle-pack-17l-kit-grid_1024x1024.webp" alt="">
 
             </div>
 
         </div>
 
-        <!-- описание товара -->
+        <!-- текст -->
         <div>
 
             <h1 class="product-title">Apidura Saddle Pack</h1>
 
-            <div class="product-price">Цена от 22000 сом</div>
+            <div class="product-price">22000 сом</div>
 
             <div class="product-description">
-                Apidura Expedition Saddle Pack — прочная и водонепроницаемая сумка для длительных поездок и экспедиций.
+                Apidura Expedition Saddle Pack — прочная водонепроницаемая сумка для велопутешествий.
+                Устанавливается под седло, не требует багажника.
             </div>
 
-            <a href="https://instagram.com/freetour.kg" class="item-button" target="_blank">
+            <a href="https://instagram.com/freetour.kg" class="item-button">
                 Заказать
             </a>
 
             <br>
 
-            <a href="index.html" class="back-link">← Вернуться в каталог</a>
+            <a href="index.html" class="back-link">
+                ← Вернуться в каталог
+            </a>
 
         </div>
 
     </div>
 
 </div>
-
-<script>
-
-/* переключение фото */
-
-const mainImage = document.getElementById("mainImage");
-const thumbs = document.querySelectorAll(".thumb");
-
-const prev = document.querySelector(".prev");
-const next = document.querySelector(".next");
-
-let currentIndex = 0;
-
-function updateImage(index) {
-    currentIndex = index;
-    mainImage.src = thumbs[index].src;
-
-    thumbs.forEach(t => t.classList.remove("active"));
-    thumbs[index].classList.add("active");
-}
-
-/* клик по мини фото */
-thumbs.forEach((thumb, index) => {
-    thumb.addEventListener("click", () => updateImage(index));
-});
-
-/* назад */
-prev.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + thumbs.length) % thumbs.length;
-    updateImage(currentIndex);
-});
-
-/* вперед */
-next.addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % thumbs.length;
-    updateImage(currentIndex);
-});
-
-</script>
 
 </body>
 </html>
