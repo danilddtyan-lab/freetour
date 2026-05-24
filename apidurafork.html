@@ -45,9 +45,11 @@
     cursor: pointer;
     opacity: 0.6;
     border-radius: 6px;
+    transition: 0.3s;
 }
 
-.thumbnails img:hover {
+.thumbnails img:hover,
+.thumbnails img.active {
     opacity: 1;
     border: 2px solid orange;
 }
@@ -79,6 +81,7 @@
     border-radius: 8px;
 }
 
+/* назад */
 .back-link {
     display: inline-block;
     margin-top: 30px;
@@ -122,21 +125,17 @@
         <!-- фото -->
         <div>
 
-            <img src="tb_image_share_1770908212687.png" class="main-image" alt="товар">
+            <img id="mainImage"
+                 src="tb_image_share_1770908212687.png"
+                 class="main-image"
+                 alt="товар">
 
             <div class="thumbnails">
 
-               <img src="apidura-apidura-expedition-fork-pack-3l.jpg"
-                     class="thumb active"
-                     alt="Фото 1">
+               <img src="apidura-apidura-expedition-fork-pack-3l.jpg" class="thumb active">
+               <img src="Apidura-Expedition-Fork-Pack-Review-13.jpg" class="thumb">
+               <img src="Apidura-Expedition-Fork-Pack-Review-Share.jpg" class="thumb">
 
-                <img src="Apidura-Expedition-Fork-Pack-Review-13.jpg"
-                     class="thumb"
-                     alt="Фото 2">
-
-                <img src="Apidura-Expedition-Fork-Pack-Review-Share.jpg"
-                     class="thumb"
-                     alt="Фото 3">
             </div>
 
         </div>
@@ -144,20 +143,12 @@
         <!-- текст -->
         <div>
 
-            <h1 class="product-title">Apidura fork Pack</h1>
+            <h1 class="product-title">Apidura Fork Pack</h1>
 
             <div class="product-price">10000 сом</div>
 
             <div class="product-description">
-                Apidura Fork Pack — лёгкая и прочная сумка для байкпакинга, которая крепится на вилку велосипеда через крепления cargo cage. 
-
-Она создана для длительных поездок и экспедиций, когда важно распределить вес и освободить место в основном багажнике.
-
-Сумка сделана из водонепроницаемого ламинированного материала и полностью защищает вещи от дождя, грязи и пыли.
-
-Благодаря компактной форме и надёжному креплению Fork Pack не болтается на неровных дорогах и подходит для любых условий — от горных маршрутов до дальних велопоходов.
-
-Идеальный выбор для тех, кто хочет увеличить объём багажа без утяжеления велосипеда.
+                Apidura Fork Pack — лёгкая и прочная сумка для байкпакинга, которая крепится на вилку велосипеда через cargo cage.
             </div>
 
             <a href="https://instagram.com/freetour.kg" class="item-button">
@@ -175,6 +166,32 @@
     </div>
 
 </div>
+
+<!-- JS ЛИСТАНИЕ ФОТО -->
+<script>
+
+const mainImage = document.getElementById("mainImage");
+const thumbs = document.querySelectorAll(".thumb");
+
+let currentIndex = 0;
+
+// смена фото
+function setImage(index) {
+    currentIndex = index;
+    mainImage.src = thumbs[index].src;
+
+    thumbs.forEach(t => t.classList.remove("active"));
+    thumbs[index].classList.add("active");
+}
+
+// клик по миниатюрам
+thumbs.forEach((img, index) => {
+    img.addEventListener("click", () => {
+        setImage(index);
+    });
+});
+
+</script>
 
 </body>
 </html>
