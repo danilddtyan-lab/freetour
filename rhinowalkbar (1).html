@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Rhinowalk нарульная сумка</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.product-page {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+}
+
+.product-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.product-gallery {
+    position: relative;
+}
+
+.main-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.gallery-btn {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 8px 14px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.gallery-btn:hover {
+    background: rgba(0,0,0,0.85);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.thumbnails {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.thumbnails img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.6;
+    border-radius: 6px;
+    transition: opacity 0.3s;
+}
+
+.thumbnails img.active,
+.thumbnails img:hover {
+    opacity: 1;
+    border: 2px solid orange;
+}
+
+.product-title {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.product-description {
+    line-height: 1.7;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.item-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: orange;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.item-button:hover {
+    background: darkorange;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
+    color: black;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.back-link:hover {
+    opacity: 1;
+}
+
+@media (max-width: 900px) {
+    .product-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ХЕДЕР -->
+<header class="header-boxed">
+
+    <div class="header-left">
+
+        <img src="Picsart_26-02-12_18-29-18-194.png" class="logo-big" alt="logo">
+
+        <div class="header-text">
+            <h1>Freetour</h1>
+            <p>все для байкпакинга</p>
+        </div>
+
+    </div>
+
+    <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="onas.html">О нас</a>
+        <a href="contacts.html">Контакты</a>
+    </nav>
+
+</header>
+
+<!-- ТОВАР -->
+<div class="product-page">
+
+    <div class="product-wrapper">
+
+        <!-- фото -->
+        <div class="product-gallery">
+
+            <img id="mainImage" src="71IhgfzfY-S.jpg" class="main-image" alt="Rhinowalk нарульная сумка">
+
+            <button class="gallery-btn prev">&#10094;</button>
+            <button class="gallery-btn next">&#10095;</button>
+
+            <div class="thumbnails">
+                <img src="71IhgfzfY-S.jpg" class="thumb active" alt="">
+                <img src="H969269448ef84df8b837efcf9a46a75c2.jpg" class="thumb" alt="">
+                <img src="S2f648834556f4f6186bfbb89a822a793x.jpg" class="thumb" alt="">
+            </div>
+
+        </div>
+
+        <!-- текст -->
+        <div>
+
+            <h1 class="product-title">Rhinowalk нарульная сумка</h1>
+
+            <div class="product-price">от 3000 сом</div>
+
+            <div class="product-description">
+                Нарульная сумка от Rhinowalk — удобное решение для велопоездок, байкпакинга
+                и ежедневных маршрутов. Выполнена из влагозащитных материалов, надёжно
+                крепится на руль и позволяет держать самые важные вещи всегда под рукой:
+                телефон, инструменты, перекус, документы или лёгкую экипировку.
+                <br><br>
+                В наличии два объёма:<br>
+                <strong>4 литра</strong> — компактный вариант для коротких поездок;<br>
+                <strong>8 литров</strong> — вместительная версия для дальних маршрутов.
+                <br><br>
+                Подходит как для города, так и для путешествий по бездорожью.
+            </div>
+
+            <a href="https://instagram.com/freetour.kg" class="item-button">
+                Заказать
+            </a>
+
+            <br>
+
+            <a href="index.html" class="back-link">
+                ← Вернуться в каталог
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+const mainImage = document.getElementById("mainImage");
+const thumbs = document.querySelectorAll(".thumb");
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
+
+let currentIndex = 0;
+
+function updateImage(index) {
+    currentIndex = index;
+    mainImage.src = thumbs[index].src;
+    thumbs.forEach(t => t.classList.remove("active"));
+    thumbs[index].classList.add("active");
+}
+
+thumbs.forEach((thumb, index) => {
+    thumb.addEventListener("click", () => updateImage(index));
+});
+
+prev.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + thumbs.length) % thumbs.length;
+    updateImage(currentIndex);
+});
+
+next.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % thumbs.length;
+    updateImage(currentIndex);
+});
+
+</script>
+
+</body>
+</html>
