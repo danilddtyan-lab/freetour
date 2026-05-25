@@ -1,75 +1,220 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>О нас — Freetour</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="О компании Freetour — всё для байкпакинга и велопутешествий.">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>О нас — Freetour</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Freetour — всё для байкпакинга и велопутешествий.">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* страница */
+.about-page {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+}
+
+/* сетка */
+.about-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* фото */
+.main-about-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* мини фото */
+.about-gallery {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.about-gallery img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.about-gallery img:hover {
+    opacity: 1;
+    border: 2px solid orange;
+}
+
+/* текст */
+.about-title {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.about-text {
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+}
+
+/* кнопка */
+.about-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: orange;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
+    color: black;
+    opacity: 0.7;
+}
+
+/* адаптив */
+@media (max-width: 850px) {
+
+    .about-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
 
+<!-- ХЕДЕР -->
 <header class="header-boxed">
 
     <div class="header-left">
-        <div class="logo-container">
-            <a href="index.html">
-                <img src="Picsart_26-02-12_18-29-18-194.png" alt="Логотип Freetour" class="logo-big">
-            </a>
-        </div>
+
+        <img src="Picsart_26-02-12_18-29-18-194.png" class="logo-big" alt="logo">
+
         <div class="header-text">
             <h1>Freetour</h1>
-            <p>Всё для байкпакинга</p>
+            <p>все для байкпакинга</p>
         </div>
+
     </div>
 
     <nav class="nav">
         <a href="index.html">Главная</a>
-        <a href="onas.html" class="nav-btn-active">О нас</a>
-        <a href="contacts.html" class="nav-btn">Контакты</a>
+        <a href="onas.html">О нас</a>
+        <a href="contacts.html">Контакты</a>
     </nav>
 
 </header>
 
-<main class="about-wrapper">
+<!-- О НАС -->
+<div class="about-page">
 
-    <section class="about-container">
+    <div class="about-wrapper">
 
-        <h2 class="about-title">О нас</h2>
+        <!-- фото -->
+        <div>
 
-       
-        <div class="about-photos">
-            <img src="IMG_20260213_163050_692.jpg" alt="Велопоход Freetour" class="about-img">
-            <img src="IMG_20260213_161804_656.jpg" alt="Велопоход Freetour" class="about-img">
-            <img src="photo_5222159965827568681_y (1).jpg" alt="Велопоход Freetour" class="about-img">
+            <!-- главное фото -->
+            <img id="mainAboutImage" src="IMG_20260213_163050_692.jpg" class="main-about-image" alt="Freetour">
+
+            <div class="about-gallery">
+
+                <img src="IMG_20260213_163050_692.jpg" class="about-thumb active" alt="">
+                <img src="IMG_20260213_161804_656.jpg" class="about-thumb" alt="">
+                <img src="photo_5222159965827568681_y (1).jpg" class="about-thumb" alt="">
+
+            </div>
+
         </div>
 
+        <!-- текст -->
+        <div>
 
-        <div class="about-text">
-            <p>
-                Freetour — это проект для тех, кто выбирает свободу дороги,
-                дальние маршруты и настоящие велоприключения.
-            </p>
-            <p>
-                Мы подбираем и тестируем снаряжение для байкпакинга,
-                чтобы каждая поездка была комфортной, надёжной
-                и продуманной до мелочей.
-            </p>
-            <p>
-                Наша цель — сделать качественное велооборудование
-                доступным для путешественников в Кыргызстане.
-            </p>
+            <h1 class="about-title">О нас</h1>
+
+            <div class="about-text">
+
+                <p>
+                    Freetour — магазин и проект для людей,
+                    которые любят велопутешествия,
+                    байкпакинг и длинные маршруты.
+                </p>
+
+                <p>
+                    Мы подбираем снаряжение,
+                    которое реально удобно использовать в поездках,
+                    и стараемся держать только проверенные вещи.
+                </p>
+
+                <p>
+                    У нас можно найти сумки,
+                    оборудование и аксессуары
+                    для путешествий на велосипеде.
+                </p>
+
+            </div>
+
+            <a href="https://instagram.com/freetour.kg" class="about-button">
+                Наш Instagram
+            </a>
+
+            <br>
+
+            <a href="index.html" class="back-link">
+                ← Вернуться на главную
+            </a>
+
         </div>
 
-    </section>
+    </div>
 
-</main>
+</div>
 
-<footer>
-    © 2026 Freetour.kg — Всё для байкпакинга
-</footer>
+<!-- JS переключение фото -->
+<script>
 
+const mainAboutImage = document.getElementById("mainAboutImage");
+const aboutThumbs = document.querySelectorAll(".about-thumb");
+
+let currentPhoto = 0;
+
+
+function changePhoto(index) {
+    currentPhoto = index;
+    mainAboutImage.src = aboutThumbs[index].src;
+
+    aboutThumbs.forEach(photo => {
+        photo.classList.remove("active");
+    });
+    aboutThumbs[index].classList.add("active");
+}
+
+
+aboutThumbs.forEach((photo, index) => {
+    photo.addEventListener("click", () => {
+        changePhoto(index);
+    });
+});
+
+</script>
 </body>
 </html>
-
+`
