@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Контакты | Freetour</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Контакты магазина Freetour — снаряжение для байкпакинга в Кыргызстане.">
+<link rel="stylesheet" href="style.css">
+<style>
+/* ===== Контактные карточки — в стиле .item с главной ===== */
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.contact-card {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.13);
+  border-radius: 18px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: 0.4s;
+  animation: fadeUp 0.7s ease forwards;
+  opacity: 0;
+}
+
+.contact-card:nth-child(1) { animation-delay: 0.05s; }
+.contact-card:nth-child(2) { animation-delay: 0.15s; }
+.contact-card:nth-child(3) { animation-delay: 0.25s; }
+.contact-card:nth-child(4) { animation-delay: 0.35s; }
+.contact-card:nth-child(5) { animation-delay: 0.45s; }
+.contact-card:nth-child(6) { animation-delay: 0.55s; }
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255,106,0,0.4);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.contact-card .icon {
+  font-size: 36px;
+  line-height: 1;
+}
+
+.contact-card .label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0.5;
+  font-weight: 600;
+}
+
+.contact-card .value {
+  font-size: 18px;
+  font-weight: 600;
+  opacity: 0.95;
+}
+
+.contact-card .value a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-card .value a:hover {
+  color: #ff6a00;
+}
+
+/* ===== Фото — широкий блок ===== */
+.wide-card {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.13);
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  animation: fadeUp 0.7s ease 0.6s forwards;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.wide-card:hover {
+  border-color: rgba(255,106,0,0.3);
+}
+
+.wide-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.wide-card-body {
+  padding: 24px 28px;
+}
+
+.wide-card-body p {
+  opacity: 0.75;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* ===== Карта ===== */
+.map-card {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.13);
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  animation: fadeUp 0.7s ease 0.7s forwards;
+  opacity: 0;
+}
+
+.map-card iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  display: block;
+}
+
+/* ===== Заголовок секции ===== */
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  opacity: 0.95;
+}
+
+.section-title span {
+  color: #ff6a00;
+}
+
+/* ===== Анимация ===== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Адаптация ===== */
+@media (max-width: 768px) {
+  .contacts-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .wide-card img {
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contacts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+
+<header class="header-boxed">
+  <div class="header-left">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="Picsart_26-02-12_18-29-18-194.png" alt="Лого" class="logo-big">
+      </a>
+    </div>
+    <div class="header-text">
+      <h1>Freetour</h1>
+      <p>все для байкпакинга</p>
+    </div>
+  </div>
+  <nav class="nav">
+    <a href="index.html">Главная</a>
+    <a href="onas.html">О нас</a>
+    <a href="contacts.html" class="nav-btn">Контакты</a>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="catalog">
+
+    <h2 class="section-title">Наши <span>контакты</span></h2>
+
+    <div class="contacts-grid">
+
+      <div class="contact-card">
+        <div class="icon">📞</div>
+        <div class="label">Телефон</div>
+        <div class="value">
+          <a href="tel:+996222411222">+996 222 411 222</a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="icon">✉️</div>
+        <div class="label">Email</div>
+        <div class="value">
+          <a href="mailto:freetour@gmail.com">freetour@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="icon">📍</div>
+        <div class="label">Адрес</div>
+        <div class="value">Бишкек, Кыргызстан</div>
+      </div>
+
+      <div class="contact-card">
+        <div class="icon">🕒</div>
+        <div class="label">Время работы</div>
+        <div class="value">09:00 – 21:00</div>
+      </div>
+
+      <div class="contact-card">
+        <div class="icon">🌍</div>
+        <div class="label">Instagram</div>
+        <div class="value">
+          <a href="https://instagram.com/freetour.kg" target="_blank">@freetour.kg</a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="icon">🚴</div>
+        <div class="label">Специализация</div>
+        <div class="value">Туры по Кыргызстану</div>
+      </div>
+
+    </div>
+
+    <!-- Фото магазина -->
+    <div class="wide-card">
+      <img src="photo.jpg" alt="Freetour — магазин байкпакинга">
+      <div class="wide-card-body">
+        <p>Мы находимся в Бишкеке и занимаемся снаряжением для велопутешествий и байкпакинга по Кыргызстану и всему Шёлковому пути.</p>
+      </div>
+    </div>
+
+    <!-- Карта -->
+    <h2 class="section-title">Мы на <span>карте</span></h2>
+    <div class="map-card">
+      <iframe
+        src="https://www.google.com/maps?q=Бишкек&output=embed"
+        title="Карта Бишкека">
+      </iframe>
+    </div>
+
+  </section>
+</main>
+
+<footer>
+  © 2026 Freetour.kg
+</footer>
+
+</body>
+</html>
