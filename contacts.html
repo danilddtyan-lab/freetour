@@ -6,7 +6,11 @@
 <title>Контакты | Freetour</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
 body{
 font-family:'Segoe UI',sans-serif;
@@ -25,7 +29,7 @@ backdrop-filter:blur(3px);
 z-index:0;
 }
 
-/* HEADER */
+/* Шапка сайта */
 .header{
 position:relative;
 z-index:2;
@@ -52,10 +56,16 @@ opacity:0.8;
 transition:0.3s;
 }
 
-.nav a:hover{opacity:1}
-.active{color:#ff6a00;opacity:1}
+.nav a:hover{
+opacity:1;
+}
 
-/* MAIN */
+.active{
+color:#ff6a00;
+opacity:1;
+}
+
+/* Основная часть */
 .main{
 position:relative;
 z-index:2;
@@ -66,9 +76,10 @@ padding:40px 20px 80px;
 gap:40px;
 }
 
+/* Карточки */
 .card{
 width:100%;
-max-width:600px;
+max-width:700px;
 padding:40px;
 border-radius:20px;
 background:rgba(255,255,255,0.08);
@@ -79,67 +90,40 @@ animation:fadeUp .8s ease forwards;
 opacity:0;
 }
 
+/* Анимация появления */
 @keyframes fadeUp{
-from{opacity:0;transform:translateY(25px)}
-to{opacity:1;transform:translateY(0)}
+from{
+opacity:0;
+transform:translateY(25px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
-h1{text-align:center;margin-bottom:25px}
-
-input,textarea{
-width:100%;
-padding:14px;
-margin-bottom:15px;
-border-radius:10px;
-border:none;
-outline:none;
-}
-
-textarea{height:120px;resize:none}
-
-button{
-width:100%;
-padding:15px;
-background:linear-gradient(45deg,#ff6a00,#ff8c42);
-border:none;
-border-radius:10px;
-color:white;
-font-weight:bold;
-cursor:pointer;
-transition:.3s;
-}
-
-button:hover{
-transform:translateY(-3px);
-box-shadow:0 10px 25px rgba(255,106,0,0.5);
-}
-
-.secondary-btn{
-margin-top:10px;
-background:transparent;
-border:1px solid #ff6a00;
-}
-
-.secondary-btn:hover{
-background:#ff6a00;
-}
-
-.success{
-display:none;
-background:#28a745;
-padding:12px;
-border-radius:8px;
-margin-bottom:15px;
+h1{
 text-align:center;
+margin-bottom:25px;
 }
 
+/* Фото компании */
+.company-photo{
+width:100%;
+height:300px;
+object-fit:cover;
+border-radius:15px;
+margin-bottom:25px;
+}
+
+/* Блок с контактами */
 .contact-info{
-text-align:center;
-margin-top:20px;
-opacity:.85;
-line-height:1.6;
+line-height:2;
+font-size:18px;
+opacity:0.9;
 }
 
+/* Карта */
 iframe{
 width:100%;
 height:250px;
@@ -147,77 +131,94 @@ border-radius:15px;
 border:none;
 }
 
-
+/* Адаптация под телефон */
 @media(max-width:768px){
-.header{flex-direction:column;gap:10px;padding:20px}
-.nav{gap:15px}
-.card{padding:25px}
+
+.header{
+flex-direction:column;
+gap:10px;
+padding:20px;
+}
+
+.nav{
+gap:15px;
+}
+
+.card{
+padding:25px;
+}
+
+.company-photo{
+height:220px;
+}
+
 }
 </style>
 </head>
+
 <body>
 
+<!-- Шапка -->
 <header class="header">
-<div class="logo">Freetour</div>
+
+<div class="logo">
+Freetour
+</div>
+
 <nav class="nav">
 <a href="index.html">Главная</a>
-  <a href="onas.html">О нас</a>
+<a href="onas.html">О нас</a>
 <a href="#" class="active">Контакты</a>
 </nav>
+
 </header>
 
+<!-- Основной контент -->
 <main class="main">
 
+<!-- Карточка с контактами -->
 <div class="card">
-<h1>Связаться с нами</h1>
 
-<div class="success" id="successMessage">
-Спасибо! Сообщение отправлено 🚀
-</div>
+<h1>Наши контакты</h1>
 
-<form id="contactForm">
+<!-- Фото -->
+<img 
+src="photo.jpg" 
+alt="Freetour"
+class="company-photo"
+>
 
-<input type="text" id="name" placeholder="Ваше имя" required>
-<input type="email" id="email" placeholder="Ваш email" required>
-<input type="tel" id="phone" placeholder="Телефон">
-<textarea id="message" placeholder="Ваше сообщение" required></textarea>
-
-<button type="submit">Отправить сообщение</button>
-<button type="button" class="secondary-btn" onclick="consultation()">Запросить консультацию</button>
-
-</form>
-
+<!-- Контактная информация -->
 <div class="contact-info">
-📞 +996222411222 <br>
-✉ freetour@gmail.com <br>
-📍 Бишкек, Кыргызстан
-</div>
+
+📞 Телефон: +996 222 411 222 <br>
+
+✉ Email: freetour@gmail.com <br>
+
+📍 Адрес: Бишкек, Кыргызстан <br>
+
+🕒 Время работы: 09:00 – 21:00 <br>
+
+🌍 Instagram: @freetour.kg <br>
+
+🚴 Туристические туры по Кыргызстану
 
 </div>
 
+</div>
+
+<!-- Карта -->
 <div class="card">
+
 <h1>Мы на карте</h1>
-<iframe 
+
+<iframe
 src="https://www.google.com/maps?q=Бишкек&output=embed">
 </iframe>
+
 </div>
 
 </main>
 
-<script>
-const BOT_TOKEN="8605681158:AAEjaoYZKdkYDYr-G6-2cfdhFjisMHOGmfc";
-const CHAT_ID="5938818067";
-const FORMSPREE="YOUR_FORMSPREE_LINK";
-
-document.getElementById("contactForm").addEventListener("submit", async function(e){
-e.preventDefault();
-
-const name=document.getElementById("name").value;
-const email=document.getElementById("email").value;
-const phone=document.getElementById("phone").value;
-const message=document.getElementById("message").value;
-
-const text=`Новая заявка Freetour:%0AИмя: ${name}%0AEmail: ${email}%0AТелефон: ${phone}%0AСообщение: ${message}`;
-
-/* Telegram*
-
+</body>
+</html>
