@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Контакты | Freetour</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: url("2023-Silk-Road-Mountain-Race-Josh-Ibbett_1.jpg") no-repeat center center / cover;
+  min-height: 100vh;
+  color: white;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(3px);
+  z-index: 0;
+}
+
+/* ========= ХЕДЕР — исправлено: было .header, в HTML стоял .header-boxed ========= */
+.header-boxed {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-container a {
+  display: block;
+}
+
+.logo-big {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.header-text h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.header-text p {
+  font-size: 13px;
+  opacity: 0.7;
+  margin: 0;
+}
+
+/* Навигация */
+.nav {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  opacity: 1;
+}
+
+.nav-btn {
+  color: #ff6a00 !important;
+  opacity: 1 !important;
+  font-weight: 600;
+}
+
+/* ========= Основная часть ========= */
+.main {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px 80px;
+  gap: 40px;
+}
+
+/* Карточки */
+.card {
+  width: 100%;
+  max-width: 700px;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  animation: fadeUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+/* Задержка для второй карточки */
+.card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Заголовки внутри карточек — h2, не h1 */
+.card h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+/* Фото компании */
+.company-photo {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 25px;
+}
+
+/* Контакты */
+.contact-info {
+  line-height: 2;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* Карта */
+iframe {
+  width: 100%;
+  height: 250px;
+  border-radius: 15px;
+  border: none;
+}
+
+/* ========= Адаптация ========= */
+@media (max-width: 768px) {
+  .header-boxed {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .nav {
+    gap: 15px;
+  }
+
+  .card {
+    padding: 25px;
+  }
+
+  .company-photo {
+    height: 220px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ========= ХЕДЕР — убран лишний </button> ========= -->
+<header class="header-boxed">
+  <div class="header-left">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="Picsart_26-02-12_18-29-18-194.png" alt="Лого" class="logo-big">
+      </a>
+    </div>
+    <div class="header-text">
+      <h1>Freetour</h1>
+      <p>все для байкпакинга</p>
+    </div>
+  </div>
+  <nav class="nav">
+    <a href="index.html">Главная</a>
+    <a href="onas.html">О нас</a>
+    <a href="contacts.html" class="nav-btn">Контакты</a>
+  </nav>
+</header>
+
+<!-- Основной контент -->
+<main class="main">
+
+  <!-- Карточка с контактами -->
+  <div class="card">
+    <h2>Наши контакты</h2>
+    <img
+      src="photo.jpg"
+      alt="Freetour"
+      class="company-photo"
+    >
+    <div class="contact-info">
+      📞 Телефон: +996 222 411 222 <br>
+      ✉ Email: freetour@gmail.com <br>
+      📍 Адрес: Бишкек, Кыргызстан <br>
+      🕒 Время работы: 09:00 – 21:00 <br>
+      🌍 Instagram: @freetour.kg <br>
+      🚴 Туристические туры по Кыргызстану
+    </div>
+  </div>
+
+  <!-- Карта -->
+  <div class="card">
+    <h2>Мы на карте</h2>
+    <iframe
+      src="https://www.google.com/maps?q=Бишкек&output=embed"
+      title="Карта Бишкека">
+    </iframe>
+  </div>
+
+</main>
+</body>
+</html>
